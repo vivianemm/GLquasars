@@ -16,6 +16,21 @@ HAVING count(*) > 2)
 
 ORDER BY z
 
+SELECT SpecObjId, z, ra, dec, class
+FROM SpecObjAll s1
+WHERE class = 'QSO' AND zWarning = 0 AND
+exists
+(SELECT z
+FROM SpecObjAll s2
+WHERE class = 'QSO' AND zWarning = 0 and
+ s1.z = s2.z
+GROUP BY z
+HAVING count(*) >= 4)
+
+ORDER BY z
+
+
+
 """
 
 # arquivo csv
@@ -48,7 +63,7 @@ def separa2(dataf):
     data = dataf.values  # array with all the table rows
     i= 0
     j = 1
-    group=[]
+    group=[data[0]]
     all_groups = []
     while j < len(dataf):
 
@@ -57,9 +72,9 @@ def separa2(dataf):
 
         else:
             all_groups.append(group)  # add the group to the list of all groups
-            x = j-i + 1
-            i += x
+            i = j
             group=[]
+            group.append(data[i])
 
         j+=1
 
@@ -67,8 +82,8 @@ def separa2(dataf):
     return n  # pulando o ultimo do grupo
 
 
-s = separa2(quasars_test)
-print(s)
+# s = separa2(quasars_test)
+# print(type(s)) -> array
 
 
 # Takes two arrays from the feature array
@@ -86,11 +101,12 @@ def D_matrix(dataf, f_metric):
     dmatrix = pairwise_distances(coords_array, metric=f_metric) # distance matrix
     return dmatrix
 
-# D_matrix(quasars_test, metric_func)
 
-#dataf_coords = quasars_test.drop(['SpecObjId', 'z'], axis=1)  # keeping only ra and dec on dataframe
-#coords_array = separa2(dataf_coords)  # separating quasars into groups with same z
-#print(coords_array) # problema ->>>>>>>>> separa2 : output eh lista e nao array, e primeira vazia
+dataf_coords = quasars_test.drop(['SpecObjId', 'z'], axis=1)  # keeping only ra and dec on dataframe
+coords_array = separa2(dataf_coords)  # separating quasars into groups with same z
+print(coords_array) # problema ->>>> listas separadas
+
+#D_matrix(quasars_test, metric_func)
 
 
 def dbscan(X, eps, min_samples):
