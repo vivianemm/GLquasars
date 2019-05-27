@@ -18,18 +18,37 @@ def add_dict(dict, key, value):
     dict[key] = value
 
 
+# adds key and value to dictionary
+def add_dict(dict, key, value):
+    dict[key] = value
+    print('sl')
 
 
-#
- #   sep_list.append(seps)
-#print(sep_list)
+# converts pandas dataframe into dictionary
+def pd_dict(data):
+    return data.to_dict()
 
 
+# dic = pd_dict(quasars_test)
+# print(dic)
+# print(dic['SpecObjId'][1])
 
-#for i in range(0,len(ras)):
-#    a = SkyCoord(ras[i], decs[i] , unit = "deg")
-#    for j in range(i+1,len(ras)):
-#        b = SkyCoord(ras[j], decs[j], unit="deg")
-#        sep = a.separation(b).arcsecond
-#        if sep <= 5:
-#            seps.append(sep)
+
+# creates a list a dictionaries with keys z, ids of quasars for that z
+# and separation between the pairs
+def sep_dictionaries(data):
+    dict_master = {}
+    seps = {}
+
+    for i in range(len(data)-1):
+        add_dict(seps, 'id' + str(i), data.loc[i, 'SpecObjId'])  # adds quasar i
+        cont = 1
+
+        while data.loc[i, 'z'] == data.loc[i+cont, 'z']:
+            sep = distance(data, i, i+cont)
+            add_dict(seps, str(i) + '_' + str(i+cont), sep)  # adds separation
+            cont += 1
+
+        add_dict(dict_master, data.loc[i, 'z'], seps)  # adds dictionary of distances to master dictionary
+
+    return dict_master

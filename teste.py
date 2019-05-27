@@ -4,22 +4,11 @@ teste inicial sem spark
 
 Query SQL in Skyserver:
 
-SELECT SpecObjId, z, ra, dec
-FROM SpecObjAll
-WHERE class = 'QSO' AND zWarning = 0 AND EXISTS
-
-(SELECT z, count(*)
-FROM SpecObjAll
-WHERE class = 'QSO' AND zWarning = 0
-GROUP BY z
-HAVING count(*) > 2)
-
-ORDER BY z
-
-SELECT SpecObjId, z, ra, dec, class
+SELECT bestObjId, z, ra, dec, class
 FROM SpecObjAll s1
 WHERE class = 'QSO' AND zWarning = 0 AND
 exists
+
 (SELECT z
 FROM SpecObjAll s2
 WHERE class = 'QSO' AND zWarning = 0 and
@@ -30,8 +19,9 @@ HAVING count(*) >= 4)
 ORDER BY z
 
 
-
 """
+
+######### margem para z e fluxos
 
 # arquivo csv
 #
@@ -48,8 +38,7 @@ import astropy.units as u
 
 
 # importing data
-quasars = pd.read_csv("Quasars_SpecObjAll.csv", dtype={'SpecObjId': int})
-quasars_test = pd.read_csv("teste.csv", dtype={'SpecObjId': int})
+quasars_test = pd.read_csv("testeflux.csv", dtype={'bestObjId': int})
 
 
 # determines the separation between quasars of indexes i and j
@@ -59,32 +48,38 @@ def distance(data, i, j):
     return a.separation(b).arcsecond
 
 
-def separa2(dataf):
+# separates quasars into groups with same z
+# returns array with arrays of each group
+def z_groups(dataf):
+    dataf = dataf.drop(['bestObjId', 'spectroFlux_u', 'spectroFlux_g', 'spectroFlux_r', 'spectroFlux_i', 'spectroFlux_z'], axis=1)
     data = dataf.values  # array with all the table rows
-    i= 0
+    i = 0
     j = 1
-    group=[data[0]]
+    first = np.delete(data[0], 0)
+    group = [first]  # adds first row
     all_groups = []
     while j < len(dataf):
 
-        if data[i][1] == data[j][1]:
-            group.append(data[j])  # add that row to the list of the group
+        if data[i][0] == data[j][0]:
+            coords = np.delete(data[j], 0)
+            group.append(coords)  # add that row to the list of the group
 
         else:
             all_groups.append(group)  # add the group to the list of all groups
             i = j
             group=[]
-            group.append(data[i])
+            first = np.delete(data[i], 0)
+            group.append(first)
 
-        j+=1
+        j += 1
 
     n = np.array(all_groups)
     return n  # pulando o ultimo do grupo
 
 
-# s = separa2(quasars_test)
-# print(type(s)) -> array
-
+#
+def flux_filter(groups):
+    
 
 # Takes two arrays from the feature array
 # returns distance between them
@@ -96,21 +91,19 @@ def metric_func(array1, array2):
 
 # creates the distance matrix
 def D_matrix(dataf, f_metric):
-    dataf_coords = dataf.drop(['SpecObjId', 'z'], axis=1) # keeping only ra and dec on dataframe
-    coords_array = separa2(dataf_coords) # separating quasars into groups with same z
-    dmatrix = pairwise_distances(coords_array, metric=f_metric) # distance matrix
-    return dmatrix
+    groups = z_groups(dataf)
+    all_matrices = []
+    for group in groups:
+
+        d_matrix = pairwise_distances(group, metric=f_metric)  # distance matrix for each z group
+        all_matrices.append(d_matrix)  # adds group's matrix to list of matrices
+    d_matrices = np.array(all_matrices)
+    return d_matrices  # array with all matrices
 
 
-dataf_coords = quasars_test.drop(['SpecObjId', 'z'], axis=1)  # keeping only ra and dec on dataframe
-coords_array = separa2(dataf_coords)  # separating quasars into groups with same z
-print(coords_array) # problema ->>>> listas separadas
-
-#D_matrix(quasars_test, metric_func)
-
-
-def dbscan(X, eps, min_samples):
-    db = DBSCAN(eps, min_samples, metric="precomputed").fit(X)
+# applies dbscan to the distance matrix
+def dbscan(d_matrix, eps, min_samples):
+    db = DBSCAN(eps, min_samples, metric="precomputed").fit(d_matrix)
     core_samples_mask = np.zeros_like(db.labels_, dtype=bool)
     core_samples_mask[db.core_sample_indices_] = True
     labels = db.labels_
@@ -123,40 +116,9 @@ def dbscan(X, eps, min_samples):
     print('Estimated number of noise points: %d' % n_noise_)
 
 
-# adds key and value to dictionary
-def add_dict(dict, key, value):
-    dict[key] = value
-    print('sl')
-
-
-# converts pandas dataframe into dictionary
-def pd_dict(data):
-    return data.to_dict()
-
-
-#dic = pd_dict(quasars_test)
-#print(dic)
-#print(dic['SpecObjId'][1])
-
-
-# creates a list a dictionaries with keys z, ids of quasars for that z
-# and separation between the pairs
-def sep_dictionaries(data):
-    dict_master = {}
-    seps = {}
-
-    for i in range(len(data)-1):
-        add_dict(seps, 'id' + str(i), data.loc[i, 'SpecObjId'])  # adds quasar i
-        cont = 1
-
-        while data.loc[i, 'z'] == data.loc[i+cont, 'z']:
-            sep = distance(data, i, i+cont)
-            add_dict(seps, str(i) + '_' + str(i+cont), sep) # adds separation
-            cont += 1
-
-        add_dict(dict_master, data.loc[i, 'z'], seps) # adds dictionary of distances to master dictionary
-
-    return dict_master
+a = D_matrix(quasars_test, metric_func)
+for x in a:
+    dbscan(x, 5, 3)
 
 
 # Aitoff projection of quasars
