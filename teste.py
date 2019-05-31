@@ -78,8 +78,8 @@ def z_groups(dataf):
 
 
 #
-def flux_filter(groups):
-    
+# def flux_filter(groups):
+
 
 # Takes two arrays from the feature array
 # returns distance between them
