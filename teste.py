@@ -48,6 +48,8 @@ def distance(data, i, j):
     return a.separation(b).arcsecond
 
 
+
+# modify to use dataframe instead of arrays
 # separates quasars into groups with same z
 # returns array with arrays of each group
 def z_groups(dataf):
