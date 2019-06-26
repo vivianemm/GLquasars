@@ -39,6 +39,7 @@ import astropy.units as u
 
 # importing data
 quasars_test = pd.read_csv("testeflux.csv", dtype={'bestObjId': int})
+quasars_test2 = pd.read_csv("sdss_z_test.csv", dtype={'bestObjId': int})
 
 
 # determines the separation between quasars of indexes i and j
@@ -79,7 +80,34 @@ def z_groups(dataf):
     return n  # pulando o ultimo do grupo
 
 
-#
+
+def zgrous2(dataf):
+    dataf = dataf[dataf.redshift != -9999.0]
+    sorted_df = dataf.sort_values(by='redshift')
+
+    ###### remove NANs
+    df = sorted_df.dropna(subset=['redshift'])
+
+    all_groups_df = df.loc[abs(df['redshift'] - df['redshift'][0]) <= 0.25]  # print(df['redshift'][0] ??????
+
+    for row in dataf.itertuples(index=True, name='Pandas'):
+        group_df = df.loc[abs(df['redshift'] - getattr(row, 'redshift')) <= 0.25]
+        #group_df['center'] = getattr(row, 'objID')
+        pd.concat([all_groups_df, group_df], names=['', getattr(row, 'objID')])
+
+
+    print(all_groups_df)
+
+zgrous2(quasars_test2)
+
+
+
+
+
+
+
+
+
 # def flux_filter(groups):
 
 
@@ -118,9 +146,9 @@ def dbscan(d_matrix, eps, min_samples):
     print('Estimated number of noise points: %d' % n_noise_)
 
 
-a = D_matrix(quasars_test, metric_func)
-for x in a:
-    dbscan(x, 5, 3)
+#a = D_matrix(quasars_test, metric_func)
+#for x in a:
+#    dbscan(x, 5, 3)
 
 
 # Aitoff projection of quasars
