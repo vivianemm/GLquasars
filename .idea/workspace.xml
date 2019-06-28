@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06a67c59-c5ae-49e4-8e5f-c65803ebb411" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redshift.py" beforeDir="false" afterPath="$PROJECT_DIR$/redshift.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sdss_z_test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/sdss_z_test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.png" beforeDir="false" afterPath="$PROJECT_DIR$/test.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/teste.py" beforeDir="false" afterPath="$PROJECT_DIR$/teste.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +15,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/teste.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1074">
-              <caret line="95" column="79" lean-forward="true" selection-start-line="95" selection-start-column="79" selection-end-line="95" selection-end-column="79" />
+            <state relative-caret-position="120">
+              <caret line="32" selection-start-line="32" selection-end-line="32" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../partitions/parts.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-234">
+              <caret line="257" column="8" selection-start-line="257" selection-start-column="8" selection-end-line="257" selection-end-column="8" />
+              <folding>
+                <element signature="e#951#970#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -27,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/redshift.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="22" column="58" lean-forward="true" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+            <state relative-caret-position="120">
+              <caret line="11" selection-start-line="11" selection-end-line="25" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -36,24 +48,6 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.png">
           <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sdss_z_test.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-115547">
-              <caret column="5" lean-forward="true" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sdss_z.csv">
-          <provider selected="true" editor-type-id="LargeFileEditor">
-            <state relative-caret-position="115665">
-              <caret line="7711" column="80" selection-start-line="7711" selection-start-column="80" selection-end-line="7711" selection-end-column="80" />
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -68,6 +62,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>71.81171</find>
+      <find>f_metr</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -86,8 +81,9 @@
         <option value="$PROJECT_DIR$/partitions/partition103.csv" />
         <option value="$PROJECT_DIR$/partitions/parts.py" />
         <option value="$PROJECT_DIR$/sdss_z_test.csv" />
-        <option value="$PROJECT_DIR$/redshift.py" />
         <option value="$PROJECT_DIR$/teste.py" />
+        <option value="$PROJECT_DIR$/redshift.py" />
+        <option value="$PROJECT_DIR$/../partitions/parts.py" />
       </list>
     </option>
   </component>
@@ -103,17 +99,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="quasars" type="b2602c69:ProjectViewProjectNode" />
-              <item name="quasars" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -134,7 +120,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.teste">
+  <component name="RunManager" selected="Python.parts (2)">
     <configuration name="parts (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="quasars" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,6 +134,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/partitions/parts.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="parts (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="quasars" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../partitions" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../partitions/parts.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -219,34 +226,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="testedoteste" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="quasars" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testedoteste.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.teste" />
+        <item itemvalue="Python.parts (2)" />
         <item itemvalue="Python.redshift" />
+        <item itemvalue="Python.teste" />
         <item itemvalue="Python.parts (1)" />
         <item itemvalue="Python.parts" />
-        <item itemvalue="Python.testedoteste" />
       </list>
     </recent_temporary>
   </component>
@@ -265,13 +251,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="696" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24944155" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32098764" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23633157" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.31040564" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -382,41 +369,58 @@
     <entry file="file://$PROJECT_DIR$/partitions/testphoto.csv" />
     <entry file="file://$PROJECT_DIR$/partitions/result.txt" />
     <entry file="file://$PROJECT_DIR$/partitions/parts.py" />
-    <entry file="file://$PROJECT_DIR$/../partitions/parts.py">
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/scipy/spatial/distance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-932">
-          <caret line="20" column="42" lean-forward="true" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        <state relative-caret-position="883">
+          <caret line="2133" selection-start-line="2133" selection-end-line="2133" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sdss_z.csv">
       <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="115665">
-          <caret line="7711" column="80" selection-start-line="7711" selection-start-column="80" selection-end-line="7711" selection-end-column="80" />
+        <state relative-caret-position="115740">
+          <caret line="7716" column="135" lean-forward="true" selection-start-line="7716" selection-start-column="135" selection-end-line="7716" selection-end-column="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sdss_z_test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115785">
+          <caret line="7719" column="95" selection-start-line="7719" selection-start-column="95" selection-end-line="7719" selection-end-column="95" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/sdss_z_test.csv">
+    <entry file="file://$PROJECT_DIR$/redshift.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115547">
-          <caret column="5" lean-forward="true" selection-end-column="5" />
+        <state relative-caret-position="120">
+          <caret line="11" selection-start-line="11" selection-end-line="25" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redshift.py">
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/pandas/core/indexes/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="22" column="58" lean-forward="true" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+        <state relative-caret-position="107">
+          <caret line="4374" selection-start-line="4374" selection-end-line="4374" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/teste.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1074">
-          <caret line="95" column="79" lean-forward="true" selection-start-line="95" selection-start-column="79" selection-end-line="95" selection-end-column="79" />
+        <state relative-caret-position="120">
+          <caret line="32" selection-start-line="32" selection-end-line="32" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../partitions/parts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-234">
+          <caret line="257" column="8" selection-start-line="257" selection-start-column="8" selection-end-line="257" selection-end-column="8" />
+          <folding>
+            <element signature="e#951#970#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
