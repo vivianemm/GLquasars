@@ -1,0 +1,4 @@
+system_name,discovery_date,ra_hrs,ra_mins,ra_secs,ra_coord,dec_degrees,dec_arcmin,dec_arcsec,dec_coord,lensgrade,number_images,theta_e,theta_e_err,z_lens,z_lens_err,z_source,z_source_err,vdisp,vdisp_err
+SDSSJ1029+2623,2006-12-01,10,29,13,157.30809434,+26,23,17.9,26.38832296,A,3,15.2,0.5,0.58,NaN,2.197,0.0003,NaN,NaN
+SDSSJ1320+1644,2009-05-01,13,20,59.17,200.24655095,+16,44,02.5,16.73405341,B,0,4.3,NaN,0.899,NaN,1.502,0.002,NaN,NaN
+SDSSJ1004+4112,2003-12-01,10,04,34,151.143142867,+41,12,42.8,41.2121094213,A,5,8.14,NaN,0.68,NaN,1.734,0.002,NaN,NaN
