@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body>
+    <meta name="robots" content="noindex">
+    <title>Master Lens Database</title>
+    <script type="text/javascript">
+<!--
+function action(actionID) {
+    document.lens.inputaction.value=actionID;
+    document.lens.submit();
+}
+function mode(modeID) {
+    document.lens.mode.value=modeID;
+    document.lens.submit();
+}
+function editmode(lensID) {
+    document.lens.lensID.value=lensID;
+    mode('edit');
+}
+function specialmode(special,lensID) {
+    document.lens.special.value=special;
+    document.lens.lensID.value=lensID;
+    mode('special');
+}
+function offmode(lensID) {
+    document.lens.lensID.value=lensID;
+    mode('off');
+}
+function addmode() {
+    document.lens.lensID.value='';
+    mode('add');
+}
+function killgraphic(graphicID) {
+    document.lens.killgraphicID.value=graphicID;
+    mode('special');
+}
+function displayDiscovery() {
+    for(i = 1; i <= 3; i++) {
+        discoveryID = 'discovery'+i.toString();
+        var row = document.getElementById(discoveryID);
+        if (i <= parseInt(document.lens.query_discovery_count.value)) {row.style.display = '';}
+        else {row.style.display = 'none';}
+    }
+}
+function displayThetaRedshift() {
+    var row = document.getElementById('theta_redshift');
+    if (parseInt(document.lens.query_theta_e_quality.value)==3) {row.style.display = '';}
+    else {row.style.display = 'none';}
+}
+function doCancel() {
+    tags = document.lens.getElementsByTagName('input');
+    for(i = 0; i < tags.length; i++) {
+        tagname = tags[i].name;
+        if (tagname.substring(0,5)!='query') {
+            switch(tags[i].type) {
+                case 'password':
+                case 'text':
+                    tags[i].value = '';
+                    break;
+                case 'checkbox':
+                case 'radio':
+                    tags[i].checked = false;
+                    break;
+            }
+        }
+    }
+    tags = document.lens.getElementsByTagName('select');
+    for(i = 0; i < tags.length; i++) {
+        tagname = tags[i].name;
+        if (tagname.substring(0,5)!='query') {
+            if(tags[i].type == 'select-one') {
+                tags[i].selectedIndex = 0;
+            }
+            else {
+                for(j = 0; j < tags[i].options.length; j++) {
+                    tags[i].options[j].selected = false;
+                }
+            }
+        }
+    }
+    tags = document.lens.getElementsByTagName('textarea');
+    for(i = 0; i < tags.length; i++) {
+        tagname = tags[i].name;
+        if (tagname.substring(0,5)!='query') {
+            tags[i].value = '';
+        }
+    }
+    document.lens.lensID.value='';
+    document.lens.mode.value='off';
+    action('Cancel');
+}
+function doSearch() {
+    document.lens.lensID.value='';
+    document.lens.mode.value='off';
+    action('Search');
+}
+function doFromObservatory(value) {
+    document.lens.do.value='fromobservatory';
+    document.lens.fromobservatoryID.value = value;
+    document.lens.submit();
+}
+function doAdvancedSearch(lensID,mode,special,SID) {
+    document.lens.lensID.value=lensID;
+    document.lens.mode.value=mode;
+    document.lens.special.value=special;
+    document.lens.action='./search_advanced.php?'+SID;
+    action('Search');
+}
+function doExportSearch(lensID,SID) {
+    document.lens.lensID.value=lensID;
+    document.lens.searchoption.value='basic';
+    document.lens.action='./export.php?'+SID;
+    document.lens.setAttribute("target", "_blank");
+    action('Search');
+}
+function setlenssort(lenssort) {
+    document.lens.lenssort.value=lenssort;
+    action('Search');
+}
+function setlensID(lensID) {
+    document.lens.lensID.value=lensID;
+    action('Search');
+}
+function doAddreferences() {
+    document.lens.do.value='addreferences';
+    document.lens.submit();
+}
+function doPublicreferences() {
+    document.lens.do.value='publicreferences';
+    document.lens.submit();
+}
+function doKillreferences() {
+    document.lens.do.value='killreferences';
+    document.lens.submit();
+}
+function doAddsoftwares() {
+    document.lens.do.value='addsoftwares';
+    document.lens.submit();
+}
+function doPublicsoftwares() {
+    document.lens.do.value='publicsoftwares';
+    document.lens.submit();
+}
+function doKillsoftwares() {
+    document.lens.do.value='killsoftwares';
+    document.lens.submit();
+}
+function doUpload() {
+    document.lens.do.value='Upload';
+    document.lens.submit();
+}
+function doCoordLabel() {
+    document.lens.do.value='coordLabel';
+    document.lens.submit();
+}
+function doCoordLabelOffmode(lensID) {
+    document.lens.do.value='coordLabel';
+    offmode(lensID);
+}
+function doVettStatus() {
+    document.lens.do.value='vettStatus';
+    document.lens.submit();
+}
+function doReleasedStatus() {
+    document.lens.do.value='releasedStatus';
+    document.lens.submit();
+}
+function doHiddenStatus() {
+    document.lens.do.value='hiddenStatus';
+    document.lens.submit();
+}
+function doVettStatusOffmode(lensID) {
+    document.lens.do.value='vettStatus';
+    offmode(lensID);
+}
+function doReleasedStatusOffmode(lensID) {
+    document.lens.do.value='releasedStatus';
+    offmode(lensID);
+}
+function doHiddenStatusOffmode(lensID) {
+    document.lens.do.value='hiddenStatus';
+    offmode(lensID);
+}
+function doNumberImages() {
+    document.lens.do.value='numberImages';
+    mode('special');
+}
+function clearDiscoveryDate(clearvalue) {
+    if (document.lens.query_discovery_date.value==clearvalue) { document.lens.query_discovery_date.value=''; }
+}
+function clearApodLink(clearvalue) {
+    if (document.lens.query_apod_link.value==clearvalue) { document.lens.query_apod_link.value=''; }
+}
+function setPrimaryGraphic(graphicType) {
+    select_tagname = 'query_graphic_type'+graphicType+'_primary_graphic'
+    tags = document.lens.getElementsByTagName('input');
+    select_tag = null;
+    for(i = 0; i < tags.length; i++) {
+        tagname = tags[i].name;
+        checked = tags[i].checked;
+        if (tagname == select_tagname && checked) {
+            select_tag = tags[i];
+            break;
+        }
+    }
+    if (!!select_tag) {
+        for(i = 0; i < tags.length; i++) {
+            tagname = tags[i].name;
+            checked = tags[i].checked;
+            if (tagname != select_tagname && checked && tagname.substring(0,18)=='query_graphic_type' && tagname.substring(tagname.length-15)=='primary_graphic') {
+                tags[i].checked = false;
+            }
+        }
+    }
+}
+//-->
+</script>
+    <script language="JavaScript" type="text/javascript" src="masterlens_11_arquivos/equalcolumns.js"></script>
+    <script language="JavaScript" type="text/javascript" src="masterlens_11_arquivos/rollover.js"></script>
+    <script language="JavaScript" type="text/javascript" src="masterlens_11_arquivos/popup.js"></script>
+    <style type="text/css" media="all">
+        @import url("./resources/css_01132015/style/u_graystyle.css");
+        @import url("./resources/css_01132015/content.css"); 
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta name="Copyright" content="Copyright (c) 2013 ">
+<!-- begin wrapper --><div id="lensWrapper"><!-- begin header -->
+    <div id="header"><a class="header"></a><table cellspacing="0" cellpadding="0" border="0"><tbody><tr height="50px"><td></td></tr><tr><td><a href="http://admin.masterlens.org/">The&nbsp;Master&nbsp;Lens&nbsp;Database</a></td></tr><tr><td><a href="http://admin.masterlens.org/">and&nbsp;The&nbsp;Orphan&nbsp;Lenses&nbsp;Project</a></td></tr></tbody></table></div>
+<!-- end header --><!-- begin innerWrapper --><div id="wideWrapper"><!-- begin content -->
+<div id="content" class="column" style="height: 1454px;">
+  <div>
+      <!-- begin main -->
+      <div id="main">
+        <form name="lens" method="POST" action="./search.php?"><input type="hidden" name="inputaction" value=""><input type="hidden" name="mode" value=""><input type="hidden" name="special" value=""><input type="hidden" name="searchoption" value="basic"><input type="hidden" name="do" value=""><input type="hidden" name="hrefaction" value=""><input type="hidden" name="status" value=""><input type="hidden" name="substatus" value=""><input type="hidden" name="lenssort" value="0"><input type="hidden" name="lensID" value=""><input type="hidden" name="referenceID" value=""><input type="hidden" name="displaypage" value="0"><input type="hidden" name="xml" value=""><div class="gallery expanded"><h3><span>Search&nbsp;675&nbsp;Gravitational Lens Systems</span></h3><div class="gallery35"><input class="button12" type="submit" name="action" value="Search" onclick="doSearch();"><input class="button12" type="submit" name="action" value="Cancel" onclick="doCancel();"><input class="button12" type="submit" name="action" value="Export Result" '="" onclick='doExportSearch("324","");'><input class="button12" type="submit" name="action" value="Advanced Search" onclick='doAdvancedSearch("324","","","");'></div><div class="galleryitems"><blockquote><table cellspacing="2" cellpadding="4" border="0"><tbody><tr height="18px"><td><select name="discoveryID" onchange="doSearch();"><option selected="selected" value="0">All Discovery Programs (*)</option><option value="2">BELLS</option><option value="38">BELLS GALLERY</option><option value="16">CASSOWARY</option><option value="18">CLASH</option><option value="7">CLASS</option><option value="14">CLASSextra</option><option value="8">COSMOS</option><option value="34">CS82</option><option value="11">DES</option><option value="26">EELs</option><option value="10">EGS</option><option value="19">GEMS</option><option value="25">H-ATLAS</option><option value="32">HE survey</option><option value="9">JVAS</option><option value="31">MACS Lenses</option><option value="28">OLS</option><option value="12">PanSTARRS</option><option value="22">RCS2</option><option value="17">SBAS</option><option value="20">Serendipitous</option><option value="29">SGAS</option><option value="13">SL2S</option><option value="1">SLACS</option><option value="4">SLACSextra</option><option value="33">SOGRAS</option><option value="36">SPT</option><option value="5">SQLS</option><option value="3">SWELLS</option><option value="6">UKIDSS</option><option value="35">VICS82</option></select></td><td><select name="foregroundID" onchange="doSearch();"><option selected="selected" value="0">All Foregrounds (*)</option><option value="1">Galaxy Lens</option><option value="2">Quasar Lens</option><option value="3">Group Lens</option><option value="4">Cluster Lens</option><option value="5">X-ray Cluster Lens</option><option value="6">Unspecified Lens</option></select></td><td><select name="backgroundID" onchange="doSearch();"><option selected="selected" value="0">All Backgrounds (*)</option><option value="1">Galaxy Source</option><option value="2">Quasar Source</option><option value="3">Unspecified Source</option></select></td><td><select name="lensgrade" onchange="doSearch();"><option selected="selected" value="All Grades (*)">All Grades (*)</option><option value="A">Grade-A</option><option value="B">Grade-B</option><option value="C">Grade-C</option><option value="No Grade">No Grade</option></select></td></tr></tbody></table><table cellspacing="2" cellpadding="4" border="0"><tbody><tr height="18px"><td>Show date</td><td><select name="date_option" onchange="doSearch();"><option selected="selected" value="Discovered">Discovered</option><option value="Modified">Modified</option><option value="Added">Added</option><option value="Vetted">Vetted</option></select></td><td width="10px"></td><td>Limit Search to:</td><td><select name="or_by" onchange="doSearch();"><option selected="selected" value="modified_by">Modified by</option><option value="created_by">Added by</option><option value="vetted_by">Vetted by</option><option value="released_by">Released by</option><option value="hidden_by">Hidden by</option><option value="adopted_by">Adopted by</option></select></td><td><select name="by_member_name" onchange="doSearch();"><option selected="selected" value="All Members (*)">All Members (*)</option><option value="Adi Zitrin">Adi Zitrin</option><option value="Alessandro Sonnenfeld">Alessandro Sonnenfeld</option><option value="Anupreeta More">Anupreeta More</option><option value="Ben Metcalf">Ben Metcalf</option><option value="Cecile Faure">Cecile Faure</option><option value="Dominique Sluse">Dominique Sluse</option><option value="Hanno Rein">Hanno Rein</option><option value="Joel Brownstein">Joel Brownstein</option><option value="Jonathan Quinn">Jonathan Quinn</option><option value="Kyle Leaf">Kyle Leaf</option><option value="Kyle Stewart">Kyle Stewart</option><option value="Leonidas Moustakas">Leonidas Moustakas</option><option value="Masamune Oguri">Masamune Oguri</option><option value="Michael Talbot">Michael Talbot</option><option value="Neal Jackson">Neal Jackson</option><option value="Raphael Gavazzi">Raphael Gavazzi</option><option value="Rémi Cabanac">Rémi Cabanac</option><option value="Terra Holayter">Terra Holayter</option></select></td></tr></tbody></table><div class="top100"><table cellspacing="1" cellpadding="0" border="0"><tbody><tr><td class="notes" width="190px">Version: 2019-04-26 up to date</td></tr></tbody></table></div></blockquote></div></div><div class="gallery expanded"><h5><span>Selected 1 Gravitational Lens System: SL2S J020210-110912</span></h5><!-- Message list with drag-able bottom --><div id="messages"><div id="message-listing" class="lens2"><div class="right321"><table class="right321" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th>Number of Discovery Programs</th><td>1</td></tr></tbody></table></div><div class="right329"><table class="right329" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th>Discovery</th><td>SL2S</td></tr></tbody></table></div><div class="right331"><table class="right331" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th>Lens Kind</th><td>GRP-GAL</td></tr></tbody></table></div><div class="mid321"><table class="mid321" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th>Lens Grade</th><td>A</td></tr><tr><th>Einstein_R ["]</th><td>5.0</td></tr><tr><th>Einstein_R quality</th><td></td></tr><tr><th>z_Lens</th><td>0.48 ± 0.02</td></tr><tr><th>z_Lens quality</th><td></td></tr><tr><th>z_Source(s)</th><td></td></tr><tr><th>z_Source quality</th><td></td></tr><tr><th>Stellar velocity disp</th><td></td></tr></tbody></table></div><div class="bottom314"><table class="bottom314" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th class="title" colspan="2">Status Report:</th><th class="red"></th><td>Needs Vetting</td></tr></tbody></table></div><div class="bottom316"><table class="bottom316" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th class="title" colspan="2">External Links:</th></tr><tr><th>SDSS</th><td></td></tr><tr><th>ADS</th><td><a target="_blank" href="http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?db_key=AST&amp;db_key=PRE&amp;qform=AST&amp;arxiv_sel=astro-ph&amp;arxiv_sel=gr-qc&amp;arxiv_sel=physics&amp;sim_query=YES&amp;ned_query=YES&amp;adsobj_query=YES&amp;aut_logic=OR&amp;obj_logic=OR&amp;author=&amp;start_mon=&amp;start_year=&amp;end_mon=&amp;end_year=&amp;ttl_logic=OR&amp;title=&amp;txt_logic=OR&amp;text=&amp;nr_to_return=200&amp;start_nr=1&amp;jou_pick=ALL&amp;ref_stems=&amp;data_and=ALL&amp;group_and=ALL&amp;start_entry_day=&amp;start_entry_mon=&amp;start_entry_year=&amp;end_entry_day=&amp;end_entry_mon=&amp;end_entry_year=&amp;min_score=&amp;sort=SCORE&amp;data_type=SHORT&amp;aut_syn=YES&amp;ttl_syn=YES&amp;txt_syn=YES&amp;aut_wt=1.0&amp;obj_wt=1.0&amp;ttl_wt=0.3&amp;txt_wt=3.0&amp;aut_wgt=YES&amp;obj_wgt=YES&amp;ttl_wgt=YES&amp;txt_wgt=YES&amp;ttl_sco=YES&amp;txt_sco=YES&amp;version=1&amp;object=30.543750%2D11.15324">SL2S J020210-110912</a></td></tr><tr><th>NED</th><td><a target="_blank" href="http://ned.ipac.caltech.edu/cgi-bin/objsearch?in_csys=Equatorial&amp;in_equinox=J2000.0&amp;hconst=73&amp;omegam=0.27&amp;omegav=0.73&amp;corr_z=1&amp;search_type=Near+Position+Search&amp;z_constraint=Unconstrained&amp;z_value1=&amp;z_value2=&amp;z_unit=z&amp;ot_include=ANY&amp;nmp_op=ANY&amp;out_csys=Equatorial&amp;out_equinox=J2000.0&amp;obj_sort=Distance+to+search+center&amp;of=pre_text&amp;zv_breaker=30000.0&amp;list_limit=5&amp;img_stamp=YES&amp;radius=0.25&amp;lon=02+02+10.50&amp;lat=%2D11+09+11.68">SL2S J020210-110912</a></td></tr><tr><th>APOD</th><td></td></tr></tbody></table></div><div class="bottom318"><table class="bottom318" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th colspan="2">Added:</th></tr><tr><td colspan="2">by Anupreeta More<br>on 2012-02-14 16:49:49 UTC</td></tr><tr><th colspan="2">Modified:</th></tr><tr><td colspan="2">by Anupreeta More<br>on 2012-10-09 02:11:01 UTC</td></tr><tr><th>Vetted:</th><th><input class="checkbox301" type="checkbox" name="query_vett_status" onclick="doVettStatusOffmode(324);" value="1" disabled="disabled"></th></tr><tr><td colspan="2"></td></tr><tr><th>Released:</th><th><input class="checkbox301" type="checkbox" name="query_released_status" onclick="doReleasedStatusOffmode(324);" value="1" disabled="disabled"></th></tr><tr><td colspan="2"></td></tr></tbody></table></div><div class="bottom319"><table class="bottom319" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th>Description</th><td></td></tr></tbody></table></div><div class="left329"><table class="left329" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th>System Name</th><td>SL2S J020210-110912</td><th>Discovery Date:</th><td>2011-09-08</td></tr><tr><th>Alternate Name(s)</th><td colspan="3">SA2</td></tr></tbody></table></div><div class="left321"><table class="left321" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th class="title">Coordinates:</th><td colspan="2"><select name="select_coord_label" onchange="doCoordLabelOffmode(324);"><option selected="selected" value="Discovery">Discovery</option></select></td></tr><tr><th>RA Hrs</th><td>02</td></tr><tr><th>RA Mins</th><td>02</td></tr><tr><th>RA Secs</th><td>10.50</td></tr><tr><th>RA [°]</th><td>30.543750</td></tr><tr><th>Dec Degrees</th><td>-11</td></tr><tr><th>Dec Arcmin</th><td>09</td></tr><tr><th>Dec Arcsec</th><td>11.68</td></tr><tr><th>Dec [°]</th><td>-11.1532440</td></tr></tbody></table></div><!-- drag-able bottom --></div></div><!-- drag-able bottom --><div class="galleryfloor"></div></div><div class="gallery expanded"><h5><span>Matched 1 Reference</span></h5><div id="messages"><div id="message-listing"><div class="condo101"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr></tr><tr><th style="width:65px;"><a title="select" href="http://admin.masterlens.org/search_advanced.php?referenceID[]=161&amp;">127&nbsp;Lenses</a></th><td style="width:250px;"><a href="http://admin.masterlens.org/citation.php?referenceID=161&amp;" target="_self">More et al. 2012&nbsp;[ApJ749(2012)38]</a></td><td style="width:450px;">The CFHTLS-Strong Lensing Legacy Survey (SL2S): Investigating the Group-scale Lenses with the SARCS Sample</td><td><img src="masterlens_11_arquivos/check.png" width="17">&nbsp;Discovery&nbsp;Paper</td></tr></tbody></table></div><!-- drag-able bottom --></div></div><!-- drag-able bottom --><div class="galleryfloor"></div></div><div class="gallery expanded"><h5><span>Matched 1 Graphics (out of 3 Graphic Types)</span></h5><div id="messages"><div id="message-listing"><div class="condo101"><table class="lens_graphic" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th class="highlight" colspan="2">Graphic:&nbsp;Pretty Pic</th><td class="none"></td><th class="highlight" colspan="2">Graphic:&nbsp;HLA-Derived Fitscut</th><td class="none"></td><th class="highlight" colspan="2">Graphic:&nbsp;Time-Delay Plot</th></tr><tr><th class="green"></th><td>[2012-06-17 07:36:55 UTC]</td><td class="none"></td><th class="amber"></th><td>None</td><td class="none"></td><th class="amber"></th><td>None</td></tr><tr><th colspan="2"><a target="_blank" href="http://admin.masterlens.org/graphic.php?lensID=324&amp;type=0&amp;"><img src="masterlens_11_arquivos/SL2SJ020210-110912.jpg" width="250px"></a></th><td class="none"></td><th colspan="2"></th><td class="none"></td><th colspan="2"></th></tr><tr><th class="none">©</th><td></td><td class="none"></td><th colspan="2"></th><td class="none"></td><th colspan="2"></th></tr><tr><td class="check" colspan="2">Primary Graphic</td><td class="none"></td><td class="nocheck" colspan="2"></td><td class="none"></td><td class="nocheck" colspan="2"></td></tr></tbody></table></div><!-- drag-able bottom --></div></div><!-- drag-able bottom --><div class="galleryfloor"></div></div><div class="gallery expanded"><h5><span>Matched 1 Observatory, 1 Instrument &amp; 5 Filters</span></h5><div id="messages"><div id="message-listing"><div class="condo101"><table class="condo0101" cellspacing="0" cellpadding="0" border="0"><tbody><tr></tr></tbody></table><table class="condo0101" cellspacing="0" cellpadding="0" border="0"><tbody><tr></tr></tbody></table><table class="condo0101" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th class="condo0105">CFHTLS</th><th class="condo099"></th><th class="condo060">Filter</th><th class="condo030">Band</th><th class="condo080">Lens Magnitude</th><th class="condo080">Flux [mJy]</th><th class="condo080">Reff [″]</th><th class="condo080">axis ratio (AB)</th><th class="condo080">PA [° E of N]</th><th class="condo081">Source Magnitude</th><th class="condo0104">Program Observations</th></tr><tr><th colspan="2" rowspan="5" style="border:1px dotted#CCC;">MegaPrime (MegaCam)</th><th class="condo060">MP9301</th><th class="condo030">u</th><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td><td class="condo0104" rowspan="5"></td></tr><tr><th class="condo060">MP9401</th><th class="condo030">g</th><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td></tr><tr><th class="condo060">MP9601</th><th class="condo030">r</th><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td></tr><tr><th class="condo060">MP9701</th><th class="condo030">i</th><td>17.80</td><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td></tr><tr><th class="condo060">MP9801</th><th class="condo030">y</th><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td><td class="condo001"></td></tr></tbody></table><table class="condo0101" cellspacing="0" cellpadding="0" border="0"><tbody><tr></tr></tbody></table></div><!-- drag-able bottom --></div></div><!-- drag-able bottom --><div class="galleryfloor"></div></div><div class="gallery expanded"><h5><span>Matched 0 Software&nbsp;Systems</span></h5><div id="messages"><div id="message-listing"><div class="condo101"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr></tr></tbody></table></div><!-- drag-able bottom --></div></div><!-- drag-able bottom --><div class="galleryfloor"></div></div><div class="gallery expanded"><h5><span>Matched 0 Lens&nbsp;Models</span></h5><div id="messages"><div id="message-listing"><!-- drag-able bottom --></div></div><!-- drag-able bottom --><div class="galleryfloor"></div></div><div class="gallery expanded"><h5><span>Matched 0 Lens Plane Images with 0 Source Plane Images (0 Time Delays)</span></h5><div id="messages"><div id="message-listing"><div class="bottom402"><table class="bottom402" cellspacing="0" cellpadding="0" border="0"><tbody><tr><th>Number of Source Plane Images</th><td>0</td></tr></tbody></table></div></div></div><!-- drag-able bottom --><div class="galleryfloor"></div></div></form>      <!-- end main -->
+      </div>
+  </div>
+</div>
+<!-- end content-->
+<!-- begin sideColumn1 -->
+<div id="sideColumn1" class="column" style="height: 1454px;">
+    <ul><li><a href="http://admin.masterlens.org/index.php?">The Orphan Lens Project</a></li><li><a href="http://admin.masterlens.org/lensing.php?">Strong Gravitational <br> Lensing by Galaxies</a></li><li class="current"><a href="http://admin.masterlens.org/search.php?">Master Lens Database</a></li><li><a href="http://admin.masterlens.org/discovery.php?">Discovery Programs</a></li><li><a href="http://admin.masterlens.org/kind.php?">Lens Kinds - Foregrounds and Backgrounds</a></li><li><a href="http://admin.masterlens.org/band.php?">Bands Observed</a></li><li><a href="http://admin.masterlens.org/model.php?">Uniform Lens Models</a></li><li><a href="http://admin.masterlens.org/software.php?">Lens Modeling Software Systematic Review</a></li><li><a href="http://admin.masterlens.org/api.php?">Client-Side Python API</a></li><li><a href="http://admin.masterlens.org/apod.php?">Astronomy Pics of the Day</a></li><li><a href="http://admin.masterlens.org/citation.php?">References</a></li><li><a href="http://admin.masterlens.org/member.php?">Database Login</a></li><li><a href="mailto:admin@masterlens.org?subject=Master%20Lens%20Database">Contact</a></li></ul>    <table class="bottom" cellspacing="0" cellpadding="0" border="0" align="center"><tbody><tr>
+      <td width="50%"></td>
+      <td width="8px" align="right "><img src="masterlens_11_arquivos/left.png" alt="" width="8px" height="40px"></td>
+      <td><img alt="" src="masterlens_11_arquivos/1.png" width="20" height="40" border="0"></td><td><img alt="" src="masterlens_11_arquivos/3.png" width="20" height="40" border="0"></td><td><img alt="" src="masterlens_11_arquivos/2.png" width="20" height="40" border="0"></td><td><img alt="" src="masterlens_11_arquivos/0.png" width="20" height="40" border="0"></td><td><img alt="" src="masterlens_11_arquivos/3.png" width="20" height="40" border="0"></td><td><img alt="" src="masterlens_11_arquivos/2.png" width="20" height="40" border="0"></td>      <td width="50%" align="left"><img src="masterlens_11_arquivos/right.png" alt="" width="8px" height="40px"></td>    </tr></tbody></table>
+</div>
+<!-- end sideColumn1 -->
+</div><!-- end innerWrapper --><!-- begin footer -->
+  <div id="footer">
+    <ul>	  <li>©2012 The University of Utah • Department of Physics and 
+Astronomy, 115 S 1400 E, Salt Lake City, UT 84112-0830 • 801.581.6901 • 
+fax 801.581.4801</li>
+
+
+</ul>
+    <ul>
+	  <li><a href="http://www.utah.edu/" target="_blank">The University of Utah</a></li>
+	  <li>|</li>
+	  <li><a href="http://www.physics.utah.edu/" target="_blank">Department of Physics and Astronomy</a></li>
+	  <li>|</li>
+	  <li><a href="http://www.utah.edu/disclaimer/index.html" target="_blank">Disclaimer</a></li>
+	  <li>|</li>
+	  <li><a href="http://www.utah.edu/privacy/" target="_blank">Privacy</a></li>
+    </ul>
+  </div>
+  <!-- end footer --></div><!-- end wrapper --></body></html>
