@@ -1,0 +1,8 @@
+Band,Filter,HST,Program Observations,SDSS,lens_mag,lens_mag_err,Flux (nmaggie),Flux (nmaggie)_err,ref (arcsec),ref (arcsec)_err,axis_ratio (AB),axis_ratio (AB)_err,PA (deg),PA (deg)_err
+u,Sloan u,,Has Sloan ugriz photometryRA = 34.75900° Dec = -8.49302° Photometric Object: GALAXY,SDSS (DR8),22.75 , 0.70,0.77 , 0.52,1.28 , 2.80,0.45 , 2.04,,
+g,Sloan g,,Has Sloan ugriz photometryRA = 34.75900° Dec = -8.49302° Photometric Object: GALAXY,SDSS (DR8),21.57 , 0.10,2.34 , 0.22,1.43 , 0.35,0.39 , 0.24,,
+r,Sloan r,,Has Sloan ugriz photometryRA = 34.75900° Dec = -8.49302° Photometric Object: GALAXY,SDSS (DR8),19.73 , 0.03,12.77 , 0.38,0.97 , 0.09,0.64 , 0.11,,
+i,Sloan i,,Has Sloan ugriz photometryRA = 34.75900° Dec = -8.49302° Photometric Object: GALAXY,SDSS (DR8),19.00 , 0.03,25.01 , 0.60,0.81 , 0.07,0.67 , 0.10,,
+z,Sloan z,,Has Sloan ugriz photometryRA = 34.75900° Dec = -8.49302° Photometric Object: GALAXY,SDSS (DR8),18.56 , 0.08,37.63 , 2.76,0.61 , 0.17,0.62 , 0.37,,
+,F475X,WFC3/UVIS (UVIS),HST Program 11588 — PI: Gavazzi,,21.79 , 0.01,,,0.57 , 0.01,0.73 , 0.01,73.2 , 0.1
+V,F600LP,WFC3/UVIS (UVIS),HST Program 11588 — PI: Gavazzi,,19.55 , 0.01,,,,,,,,

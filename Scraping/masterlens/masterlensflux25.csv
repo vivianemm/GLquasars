@@ -1,0 +1,9 @@
+Band,Filter,HST,Program Observations,SDSS,lens_mag,lens_mag_err,Flux (nmaggie),Flux (nmaggie)_err,ref (arcsec),ref (arcsec)_err,axis_ratio (AB),axis_ratio (AB)_err,PA (deg),PA (deg)_err
+u,Sloan u,,Has Sloan ugriz photometrySDSS Spectrum: 810-52672-252zL = 0.35071 ± 0.00008σv = (242 ± 30) km/sRA = 52.55052° Dec = -0.34775° Spectroscopic Object: GALAXY,SDSS (DR8),21.87 , 0.34,1.78 , 0.57,59.33 , 33.36,0.17 , 0.15,,
+g,Sloan g,,Has Sloan ugriz photometrySDSS Spectrum: 810-52672-252zL = 0.35071 ± 0.00008σv = (242 ± 30) km/sRA = 52.55052° Dec = -0.34775° Spectroscopic Object: GALAXY,SDSS (DR8),20.19 , 0.04,8.38 , 0.27,1.49 , 0.13,0.66 , 0.10,,
+r,Sloan r,,Has Sloan ugriz photometrySDSS Spectrum: 810-52672-252zL = 0.35071 ± 0.00008σv = (242 ± 30) km/sRA = 52.55052° Dec = -0.34775° Spectroscopic Object: GALAXY,SDSS (DR8),18.68 , 0.01,33.61 , 0.46,0.96 , 0.04,0.95 , 0.06,,
+i,Sloan i,,Has Sloan ugriz photometrySDSS Spectrum: 810-52672-252zL = 0.35071 ± 0.00008σv = (242 ± 30) km/sRA = 52.55052° Dec = -0.34775° Spectroscopic Object: GALAXY,SDSS (DR8),18.09 , 0.01,57.90 , 0.67,0.80 , 0.03,0.98 , 0.05,,
+z,Sloan z,,Has Sloan ugriz photometrySDSS Spectrum: 810-52672-252zL = 0.35071 ± 0.00008σv = (242 ± 30) km/sRA = 52.55052° Dec = -0.34775° Spectroscopic Object: GALAXY,SDSS (DR8),17.67 , 0.03,85.74 , 2.40,0.99 , 0.09,0.86 , 0.11,,
+I,F814W,ACS/WFC (WFC1),HST Program 10886 — PI: Bolton,,18.16 , 0.16,,,1.20 , 0.01,0.77 , 0.01,109.6 , 0.1
+H,F160W,NIC2 (NIC2),HST Program 11202 — PI: Koopmans,,,,,,,,,,,
+V,F606W,WFPC2 (WF3),HST Program 11202 — PI: Koopmans,,,,,,,,,,,

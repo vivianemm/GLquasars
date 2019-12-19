@@ -1,0 +1,9 @@
+Band,Filter,HST,Program Observations,SDSS,lens_mag,lens_mag_err,Flux (nmaggie),Flux (nmaggie)_err,ref (arcsec),ref (arcsec)_err,axis_ratio (AB),axis_ratio (AB)_err,PA (deg),PA (deg)_err
+u,Sloan u,,Has Sloan ugriz photometryRA = 114.40173° Dec = 32.26095° Photometric Object: GALAXY,SDSS (DR8),23.42 , 0.68,0.38 , 0.30,1.96 , 2.64,0.05 , 0.00,-37.03 , 0.01
+g,Sloan g,,Has Sloan ugriz photometryRA = 114.40173° Dec = 32.26095° Photometric Object: GALAXY,SDSS (DR8),21.19 , 0.06,3.33 , 0.17,0.63 , 0.14,0.94 , 0.34,48.46 , 0.01
+r,Sloan r,,Has Sloan ugriz photometryRA = 114.40173° Dec = 32.26095° Photometric Object: GALAXY,SDSS (DR8),19.42 , 0.02,17.10 , 0.29,0.65 , 0.05,0.56 , 0.08,19.11 , 0.01
+i,Sloan i,,Has Sloan ugriz photometryRA = 114.40173° Dec = 32.26095° Photometric Object: GALAXY,SDSS (DR8),18.76 , 0.02,31.41 , 0.43,0.76 , 0.03,0.45 , 0.06,16.91 , 0.01
+z,Sloan z,,Has Sloan ugriz photometryRA = 114.40173° Dec = 32.26095° Photometric Object: GALAXY,SDSS (DR8),18.41 , 0.04,43.14 , 1.53,0.46 , 0.12,0.74 , 0.24,5.45 , 0.01
+B,F435W,ACS/WFC (WFC1),HST Program 10174 — PI: KoopmansHST Program 10494 — PI: Koopmans,,,,,,,,,,,
+V,F555W,ACS/WFC (WFC1),HST Program 10174 — PI: KoopmansHST Program 10494 — PI: Koopmans,,,,,,,,,,,
+I,F814W,ACS/WFC (WFC1),HST Program 10174 — PI: KoopmansHST Program 10494 — PI: Koopmans,,18.75 , 0.03,,,0.61 , 0.01,,,,
