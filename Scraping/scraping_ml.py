@@ -94,7 +94,7 @@ def system(df_list):
 
 #### Coordinates table (13)
 def coordinates(df_list):
-    coords_df = pick_table(df_list, 'Coordinates:').drop(2, axis=1)  # Manual coordinates
+    coords_df = pick_table(df_list, 'Coordinates:') #.drop(2, axis=1)  # Manual coordinates
     coords_df = coords_df.set_index(0).T
     coords_df['Coordinates:'] = 'Manual'
     return coords_df
@@ -134,7 +134,7 @@ def hst(df_list):
     hst_df = pick_table(df_list,'HST')
 
     if hst_df is not None:
-        hst_df = hst_df.drop(columns=['Unnamed: 1'])
+        #hst_df = hst_df.drop(columns=['Unnamed: 1'])
         hst_df = hst_df.set_index('Band')
     else:
         hst_df = pd.DataFrame()
