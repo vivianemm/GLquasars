@@ -1,0 +1,2 @@
+Discovery,Lens Kind,Lens Grade,Einstein_R quality,z_Lens quality,z_Source quality,Description,Einstein_R,Einstein_R_err,z_lens,z_lens_err,z_source,z_source_err,Stellar_v_disp,Stellar_v_disp_err,Discovery Date,Name,N Images
+SLACS,GAL-GAL,A,SIE model,spectroscopic,spectroscopic,"This  system includes a small round red companion to the N of the lens galaxy, not to be confused with the prominent lensed images.",1.33 , 0.01,0.24055 , 0.00005,0.47 , 0.01,297 , 16,2006-02,SDSS J0956+5100,3

@@ -1,0 +1,2 @@
+Discovery,Lens Kind,Lens Grade,Einstein_R quality,z_Lens quality,z_Source quality,Description,Einstein_R,Einstein_R_err,z_lens,z_lens_err,z_source,z_source_err,Stellar_v_disp,Stellar_v_disp_err,Discovery Date,Name,N Images
+SLACS,GAL-GAL,A,SIE model,spectroscopic,spectroscopic,Comments on IFU+HST Data: Clear coincidence of IFU line emission and HST lensed features.,0.79 , 0.01,0.11958 , 0.00003,0.197 , 0.001,254 , 12,2008-08,SDSS J0044+0113,2

@@ -1,0 +1,6 @@
+Band,HST,Filter,Lens Magnitude,Program Observations
+V,ACS/HRC (HRC),F606W,,HST Program 10563 — PI: Dye
+H,NIC2 (NIC2),F160W,,HST Program 9744 — PI: Kochanek
+I,STIS/CCD (F28X50LP),MIRVIS,,HST Program 7462 — PI: Ibata
+I,WFPC2 (PC1),F814W,18.67,HST Program 8175 — PI: Falco
+V,WFPC2 (WF4),F555W,,HST Program 6560 — PI: Warren

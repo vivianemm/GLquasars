@@ -1,0 +1,9 @@
+Band,Filter,HST,Lens Magnitude,PA [° E of N],Program Observations,QSO Magnitude,SDSS,Flux (nmaggie),Flux (nmaggie)_err,ref (arcsec),ref (arcsec)_err,axis_ratio (AB),axis_ratio (AB)_err
+u,Sloan u,,,7.0,Has Sloan ugriz photometrySDSS Spectrum: 552-51992-221zQSO = 3.564 ± 0.001RA = 135.89558° Dec = 50.47210° Spectroscopic Object: QSO,24.65 ± 1.49,SDSS (DR8),0.00 , 0.38,0.01 , 0.00,0.06 , 0.00
+g,Sloan g,,,51.86,Has Sloan ugriz photometrySDSS Spectrum: 552-51992-221zQSO = 3.564 ± 0.001RA = 135.89558° Dec = 50.47210° Spectroscopic Object: QSO,21.55 ± 0.09,SDSS (DR8),2.39 , 0.20,0.53 , 0.27,1.00 , 0.20
+r,Sloan r,,,23.66,Has Sloan ugriz photometrySDSS Spectrum: 552-51992-221zQSO = 3.564 ± 0.001RA = 135.89558° Dec = 50.47210° Spectroscopic Object: QSO,19.50 ± 0.02,SDSS (DR8),15.79 , 0.33,0.80 , 0.06,0.60 , 0.10
+i,Sloan i,,,24.21,Has Sloan ugriz photometrySDSS Spectrum: 552-51992-221zQSO = 3.564 ± 0.001RA = 135.89558° Dec = 50.47210° Spectroscopic Object: QSO,18.84 ± 0.02,SDSS (DR8),29.17 , 0.49,0.77 , 0.04,0.58 , 0.07
+z,Sloan z,,,26.25,Has Sloan ugriz photometrySDSS Spectrum: 552-51992-221zQSO = 3.564 ± 0.001RA = 135.89558° Dec = 50.47210° Spectroscopic Object: QSO,18.47 ± 0.04,SDSS (DR8),41.04 , 1.62,0.63 , 0.11,0.46 , 0.21
+V,F555W,ACS/WFC (WFC1),22.08 ± 0.01,,HST Program 9744 — PI: Kochanek,,,,,,,,
+I,F814W,ACS/WFC (WFC1),19.93 ± 0.01,,HST Program 9744 — PI: Kochanek,,,,,,,,
+H,F160W,NIC2 (NIC2),17.88 ± 0.09,,HST Program 9744 — PI: Kochanek,,,,,,,,

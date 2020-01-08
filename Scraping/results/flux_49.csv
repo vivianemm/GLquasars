@@ -1,0 +1,10 @@
+Band,HST,Filter,Program Observations
+V,ACS/WFC (WFC1),F606W,HST Program 10569 — PI: Keeton
+I,ACS/WFC (WFC1),F814W,HST Program 10569 — PI: Keeton
+H,NIC2 (NIC2),F160W,HST Program 7887 — PI: FalcoHST Program 9375 — PI: Kochanek
+V,STIS/CCD (50CCD),MIRVIS,HST Program 7332 — PI: Bernstein
+I,STIS/CCD (F28X50LP),MIRVIS,HST Program 7475 — PI: LanzettaHST Program 7332 — PI: BernsteinHST Program 8336 — PI: CohenHST Program 8681 — PI: Charlton
+U,STIS/NUV (25MAMA),MIRNUV,HST Program 8025 — PI: Hutchings
+U,STIS/NUV (25MAMA),G230L,HST Program 8025 — PI: Hutchings
+V,WFPC2 (WF3),F555W,HST Program 5979 — PI: Rhee
+I,WFPC2 (WF3),F814W,HST Program 5979 — PI: Rhee

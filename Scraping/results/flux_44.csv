@@ -1,0 +1,12 @@
+Band,Filter,HST,Lens Magnitude,PA [° E of N],Program Observations,SDSS,Source Magnitude,Unnamed: 4,Flux (nmaggie),Flux (nmaggie)_err,ref (arcsec),ref (arcsec)_err,axis_ratio (AB),axis_ratio (AB)_err
+u,Sloan u,,,95.77,Has Sloan ugriz photometryRA = 148.75038° Dec = -1.50187° Photometric Object: STAR,SDSS (DR8),,23.85 ± 1.11,0.22 , 0.36,24.65 , 70.72,0.05 , 0.00
+g,Sloan g,,,57.75,Has Sloan ugriz photometryRA = 148.75038° Dec = -1.50187° Photometric Object: STAR,SDSS (DR8),,21.74 ± 0.09,2.02 , 0.16,0.48 , 0.22,0.10 , 61.77
+r,Sloan r,,,48.51,Has Sloan ugriz photometryRA = 148.75038° Dec = -1.50187° Photometric Object: STAR,SDSS (DR8),,19.21 ± 0.02,20.71 , 0.34,0.40 , 0.00,0.96 , 0.28
+i,Sloan i,,,47.61,Has Sloan ugriz photometryRA = 148.75038° Dec = -1.50187° Photometric Object: STAR,SDSS (DR8),,18.50 ± 0.01,39.68 , 0.50,0.38 , 0.03,0.26 , 0.21
+z,Sloan z,,,52.36,Has Sloan ugriz photometryRA = 148.75038° Dec = -1.50187° Photometric Object: STAR,SDSS (DR8),,18.20 ± 0.03,52.57 , 1.43,0.41 , 0.09,0.09 , 10.96
+H,F160W,NIC2 (NIC2),,,HST Program 7495 — PI: Falco,,,,,,,,,
+V,MIRVIS,STIS/CCD (50CCD),,,HST Program 8572 — PI: Storrie-lombardi,,,,,,,,,
+,MIRFUV,STIS/FUV (F25QTZ),,,HST Program 8572 — PI: Storrie-lombardi,,,,,,,,,
+V,F555W,WFPC2 (PC1),,,HST Program 5505 — PI: FalcoHST Program 8268 — PI: ImpeyHST Program 9133 — PI: Falco,,,,,,,,,
+R,F675W,WFPC2 (PC1),,,HST Program 5505 — PI: FalcoHST Program 8268 — PI: ImpeyHST Program 9133 — PI: Falco,,,,,,,,,
+I,F814W,WFPC2 (PC1),21.21,,HST Program 5505 — PI: FalcoHST Program 8268 — PI: ImpeyHST Program 9133 — PI: Falco,,18.27,,,,,,,

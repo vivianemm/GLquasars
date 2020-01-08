@@ -1,0 +1,11 @@
+Band,HST,Filter,Lens Magnitude,Source Magnitude,Program Observations
+H,NIC2 (NIC2),F160W,,,HST Program 7338 — PI: Falco
+,WFC3/IR (IRSUB512),F125W,,,HST Program 12874 — PI: Floyd
+,WFC3/IR (IRSUB512),F160W,,,HST Program 12874 — PI: Floyd
+,WFC3/UVIS (UVIS),F621M,,,HST Program 12874 — PI: Floyd
+,WFC3/UVIS (UVIS),F763M,,,HST Program 12874 — PI: Floyd
+,WFC3/UVIS (UVIS),F845M,,,HST Program 12874 — PI: Floyd
+,WFC3/UVIS (UVIS),F467M,,,HST Program 12874 — PI: Floyd
+V,WFPC2 (PC1),F555W,,,HST Program 5505 — PI: FalcoHST Program 7495 — PI: FalcoHST Program 8175 — PI: Falco
+R,WFPC2 (PC1),F675W,,,HST Program 5505 — PI: FalcoHST Program 7495 — PI: FalcoHST Program 8175 — PI: Falco
+I,WFPC2 (PC1),F814W,20.91,19.62,HST Program 5505 — PI: FalcoHST Program 7495 — PI: FalcoHST Program 8175 — PI: Falco

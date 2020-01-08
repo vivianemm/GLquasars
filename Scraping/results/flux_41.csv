@@ -1,0 +1,8 @@
+Band,Filter,HST,PA [° E of N],Program Observations,QSO Magnitude,SDSS,Flux (nmaggie),Flux (nmaggie)_err,ref (arcsec),ref (arcsec)_err,axis_ratio (AB),axis_ratio (AB)_err
+u,Sloan u,,24.79,Has Sloan ugriz photometrySDSS Spectrum: 1937-53388-95zQSO = 0.21017 ± 0.00005RA = 139.85927° Dec = 27.34751° Spectroscopic Object: QSO,19.88 ± 0.06,SDSS (DR8),11.22 , 0.63,0.47 , 0.26,0.90 , 0.53
+g,Sloan g,,68.03,Has Sloan ugriz photometrySDSS Spectrum: 1937-53388-95zQSO = 0.21017 ± 0.00005RA = 139.85927° Dec = 27.34751° Spectroscopic Object: QSO,18.94 ± 0.01,SDSS (DR8),26.67 , 0.33,0.82 , 0.04,0.87 , 0.05
+r,Sloan r,,71.32,Has Sloan ugriz photometrySDSS Spectrum: 1937-53388-95zQSO = 0.21017 ± 0.00005RA = 139.85927° Dec = 27.34751° Spectroscopic Object: QSO,17.86 ± 0.01,SDSS (DR8),71.87 , 0.53,1.02 , 0.02,0.77 , 0.03
+i,Sloan i,,71.67,Has Sloan ugriz photometrySDSS Spectrum: 1937-53388-95zQSO = 0.21017 ± 0.00005RA = 139.85927° Dec = 27.34751° Spectroscopic Object: QSO,17.30 ± 0.01,SDSS (DR8),119.74 , 0.77,0.97 , 0.02,0.74 , 0.02
+z,Sloan z,,83.32,Has Sloan ugriz photometrySDSS Spectrum: 1937-53388-95zQSO = 0.21017 ± 0.00005RA = 139.85927° Dec = 27.34751° Spectroscopic Object: QSO,17.00 ± 0.02,SDSS (DR8),158.43 , 2.25,0.99 , 0.04,0.74 , 0.05
+B,F475W,WFC3/UVIS (UVIS),,HST Program 12233 — PI: Courbin,,,,,,,,
+I,F814W,WFC3/UVIS (UVIS),,HST Program 12233 — PI: Courbin,,,,,,,,

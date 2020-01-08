@@ -1,0 +1,7 @@
+Band,Filter,HST,PA [° E of N],Program Observations,SDSS,lens_mag,lens_mag_err,Flux (nmaggie),Flux (nmaggie)_err,ref (arcsec),ref (arcsec)_err,axis_ratio (AB),axis_ratio (AB)_err
+u,Sloan u,,163.5,Has Sloan ugriz photometryRA = 35.46327° Dec = -6.79244° Photometric Object: GALAXY,SDSS (DR8),21.94 , 0.48,1.67 , 0.74,3.84 , 6.30,0.75 , 1.50
+g,Sloan g,,27.63,Has Sloan ugriz photometryRA = 35.46327° Dec = -6.79244° Photometric Object: GALAXY,SDSS (DR8),22.31 , 0.26,1.19 , 0.29,0.84 , 1.51,0.76 , 1.84
+r,Sloan r,,6.02,Has Sloan ugriz photometryRA = 35.46327° Dec = -6.79244° Photometric Object: GALAXY,SDSS (DR8),20.26 , 0.06,7.86 , 0.46,1.47 , 0.29,0.52 , 0.18
+i,Sloan i,,20.16,Has Sloan ugriz photometryRA = 35.46327° Dec = -6.79244° Photometric Object: GALAXY,SDSS (DR8),19.13 , 0.03,22.26 , 0.71,1.51 , 0.13,0.76 , 0.10
+z,Sloan z,,41.04,Has Sloan ugriz photometryRA = 35.46327° Dec = -6.79244° Photometric Object: GALAXY,SDSS (DR8),18.96 , 0.11,25.96 , 2.73,1.27 , 0.54,0.57 , 0.37
+V,F606W,WFPC2 (WF3),,HST Program 11289 — PI: Kneib,,,,,,,,,

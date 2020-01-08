@@ -1,0 +1,5 @@
+Band,HST,Filter,Lens Magnitude,Reff [″],axis ratio (AB),PA [° E of N],Program Observations
+B,ACS/WFC (WFC),F435W,,,,,HST Program 11689 — PI: Dupke
+V,ACS/WFC (WFC),F606W,,,,,HST Program 11689 — PI: Dupke
+I,ACS/WFC (WFC),F814W,18.06 ± 0.01,0.70 ± 0.01,0.61 ± 0.01,+60.0 ± 0.1,HST Program 11689 — PI: Dupke
+V,WFPC2 (WF3),F606W,,,,,HST Program 11103 — PI: Ebeling

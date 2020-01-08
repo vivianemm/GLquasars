@@ -1,0 +1,2 @@
+Discovery,Lens Kind,Lens Grade,Einstein_R quality,z_Lens quality,z_Source quality,Description,Einstein_R,Einstein_R_err,z_lens,z_lens_err,z_source,z_source_err,Stellar_v_disp,Stellar_v_disp_err,Discovery Date,Name,N Images
+SLACS,GAL-GAL,A,SIE model,spectroscopic,spectroscopic,Luminous  red galaxy lensing two background sources. The most obvious feature of  the lensed emission is a (nearly) complete Einstein ring.,0.96 , 0.02,0.22704 , 0.00005,0.9313 , 0.0001,202 , 18,2008-08-01,SDSS J0029-0055,2

@@ -1,0 +1,4 @@
+Band,HST,Filter,Lens Magnitude,Program Observations
+I,ACS/WFC (WFCENTER),F814W,20.34,HST Program 9822 — PI: Scoville
+V,WFPC2 (WF3),F606W,,HST Program 11289 — PI: Kneib
+U,WFPC2 (WFALL),F300W,,HST Program 9822 — PI: Scoville

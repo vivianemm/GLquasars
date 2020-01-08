@@ -35,7 +35,7 @@ def drop_nans(df):
 
 def split_col(df, old_new_list):  # old_new_list = [[oldname, newname], ...]
     for pair in old_new_list:
-        if pair[0] in df.columns:
+        if pair[0] in df.columns and type(list(df[pair[0]])[0]) == str and "±" in list(df[pair[0]])[0]:
             df[[pair[1], pair[1] + '_err']] = df[pair[0]].str.split("±", n = 1, expand = True)
             df.drop(pair[0], axis=1, inplace=True)
         else:
@@ -95,33 +95,42 @@ def system(df_list):
 #### Coordinates table (13)
 def coordinates(df_list):
     coords_df = pick_table(df_list, 'Coordinates:') #.drop(2, axis=1)  # Manual coordinates
+    coords_df.drop(2, axis=1, inplace=True)    
     coords_df = coords_df.set_index(0).T
     coords_df['Coordinates:'] = 'Manual'
+    coords_df = coords_df.set_index('Coordinates:')
+
     return coords_df
 
 
 #### External links
-def external(df_list, filename):
-    external_df = pick_table(df_list,'External Links:')
+def external(df_list, filename):    
     #external_df.columns = [''] * len(external_df.columns)
-    external_df = external_df.set_index('External Links:').T
+    #external_df.drop('External Links:.1', axis=1, inplace=True)
+    
+    soup = BeautifulSoup(open(filename), "lxml")
+    external_df = pick_table(df_list, 'External Links:')
+    for table in soup.find_all('table'):
+            
+        if table.th is not None and table.th.text == 'External Links:':
+            refs = get_table_links(table)
+        else:
+            pass
+            
+            #if external_df is not None:
+    external_df.columns = ['database', 'link']
+    external_df = external_df.set_index('database')
     drop_nans(external_df)
-    external_df = external_df.T
-    external_df.drop('External Links:.1', axis=1, inplace=True)
-
-    soup = BeautifulSoup(open(filename), "html.parser")
-    tb = soup.find_all('table')[9]
-    links = get_table_links(tb)
-
-    external_df['links'] = links
-
+    external_df['links'] = refs
+    external_df.drop('link', axis=1, inplace=True)
+    
     return external_df
 
 
 #### Flux table (SDSS 16, HST 17)
 def sdss(df_list):
     df = pick_table(df_list,'Filter')
-    if 'SDSS' in df.columns.values:
+    if df is not None and 'SDSS' in df.columns.values:
         sdss_df = df.set_index('Band')
         sdss_df = sdss_df.drop(columns=['Unnamed: 1'])
     else:
@@ -134,7 +143,7 @@ def hst(df_list):
     hst_df = pick_table(df_list,'HST')
 
     if hst_df is not None:
-        #hst_df = hst_df.drop(columns=['Unnamed: 1'])
+        hst_df = hst_df.drop(columns=['Unnamed: 1'])
         hst_df = hst_df.set_index('Band')
     else:
         hst_df = pd.DataFrame()
@@ -146,6 +155,9 @@ def flux(df_list):
     hst_df = hst(df_list)
 
     flux_df = pd.concat([sdss_df, hst_df])
+    
+    #flux_df['release'] = list(sdss_df['SDSS']) + list(hst_df['HST'])
+    #flux_df = flux_df.drop(columns=['SDSS','HST'])
 
     drop_nans(flux_df)
     split_col(flux_df, [['Lens Magnitude', 'lens_mag'], ['Flux [nmaggie]', 'Flux (nmaggie)'],
@@ -181,11 +193,13 @@ def redshift(df_list):
 def time(df_list):
     time_df = pick_table(df_list, 'Time Delays:')
 
-    times = list(time(df_list)['Time Delays:']['Time Delay (days)'])
-    if time(df_list) is None or np.isnan(time()['Time Delays:'].values).all():
-        time_df = None
-    return time_df
+    if time_df is not None:
+        times = list(time_df['Time Delays:']['Time Delay (days)'])
+    #print(times)
+        if np.isnan(times).all():
+            time_df = None
 
+    return time_df
 
 #### References table (14)
 def refs(filename, df_list):
@@ -210,6 +224,9 @@ def refs(filename, df_list):
 #### Main code
 
 def main():
+    
+    import warnings
+    warnings.filterwarnings("ignore")
 
     if len(argv) == 0:
         print("APPNAME:\n\t[1] Dir path")

@@ -1,0 +1,7 @@
+Band,Filter,HST,PA [° E of N],Program Observations,SDSS,lens_mag,lens_mag_err,Flux (nmaggie),Flux (nmaggie)_err,ref (arcsec),ref (arcsec)_err,axis_ratio (AB),axis_ratio (AB)_err
+u,Sloan u,,-37.81,Has Sloan ugriz photometryRA = 131.79415° Dec = 34.80748° Photometric Object: GALAXY,SDSS (DR8),23.35 , 0.78,0.41 , 0.36,1.14 , 2.10,0.05 , 0.00
+g,Sloan g,,-18.74,Has Sloan ugriz photometryRA = 131.79415° Dec = 34.80748° Photometric Object: GALAXY,SDSS (DR8),22.65 , 0.20,0.86 , 0.17,1.36 , 0.98,0.41 , 0.47
+r,Sloan r,,98.82,Has Sloan ugriz photometryRA = 131.79415° Dec = 34.80748° Photometric Object: GALAXY,SDSS (DR8),20.98 , 0.07,4.03 , 0.26,0.65 , 0.18,0.69 , 0.33
+i,Sloan i,,127.07,Has Sloan ugriz photometryRA = 131.79415° Dec = 34.80748° Photometric Object: GALAXY,SDSS (DR8),20.06 , 0.05,9.50 , 0.40,0.57 , 0.14,0.93 , 0.26
+z,Sloan z,,142.13,Has Sloan ugriz photometryRA = 131.79415° Dec = 34.80748° Photometric Object: GALAXY,SDSS (DR8),19.62 , 0.11,14.09 , 1.37,1.18 , 0.31,0.40 , 0.25
+I,F814W,ACS/WFC (WFC),-74.1,HST Program 10152 — PI: Donahue,,,,,,,,,

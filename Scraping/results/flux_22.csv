@@ -1,0 +1,6 @@
+Band,SDSS,Filter,PA [° E of N],Program Observations,lens_mag,lens_mag_err,Flux (nmaggie),Flux (nmaggie)_err,ref (arcsec),ref (arcsec)_err,axis_ratio (AB),axis_ratio (AB)_err
+u,SDSS (DR8),Sloan u,139.67,Has Sloan ugriz photometryRA = 36.44221° Dec = -7.62738° Photometric Object: GALAXY,23.74 , 1.86,0.26 , 0.65,59.17 , 110.65,0.55 , 1.04
+g,SDSS (DR8),Sloan g,129.93,Has Sloan ugriz photometryRA = 36.44221° Dec = -7.62738° Photometric Object: GALAXY,21.23 , 0.10,3.22 , 0.30,7.83 , 1.90,0.40 , 0.12
+r,SDSS (DR8),Sloan r,25.43,Has Sloan ugriz photometryRA = 36.44221° Dec = -7.62738° Photometric Object: GALAXY,19.55 , 0.03,15.16 , 0.46,1.20 , 0.11,0.59 , 0.09
+i,SDSS (DR8),Sloan i,8.26,Has Sloan ugriz photometryRA = 36.44221° Dec = -7.62738° Photometric Object: GALAXY,18.60 , 0.02,36.26 , 0.69,1.42 , 0.07,0.85 , 0.07
+z,SDSS (DR8),Sloan z,103.13,Has Sloan ugriz photometryRA = 36.44221° Dec = -7.62738° Photometric Object: GALAXY,18.15 , 0.05,55.04 , 2.43,1.26 , 0.19,0.89 , 0.19

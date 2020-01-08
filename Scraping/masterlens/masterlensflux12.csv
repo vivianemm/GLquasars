@@ -1,0 +1,6 @@
+Band,SDSS,Filter,Unnamed: 4,PA [° E of N],Program Observations,Flux (nmaggie),Flux (nmaggie)_err,ref (arcsec),ref (arcsec)_err,axis_ratio (AB),axis_ratio (AB)_err
+u,SDSS (DR8),Sloan u,21.65 ± 0.45,32.69,Has Sloan ugriz photometrySDSS Spectrum: 664-52174-111zL = -0.00009 ± 0.00002RA = 26.73336° Dec = -9.49791° Spectroscopic Object: STAR,2.17 , 0.90,20.10 , 8.44,0.35 , 0.19
+g,SDSS (DR8),Sloan g,20.00 ± 0.04,28.34,Has Sloan ugriz photometrySDSS Spectrum: 664-52174-111zL = -0.00009 ± 0.00002RA = 26.73336° Dec = -9.49791° Spectroscopic Object: STAR,10.00 , 0.38,3.55 , 0.34,0.49 , 0.07
+r,SDSS (DR8),Sloan r,18.21 ± 0.01,45.47,Has Sloan ugriz photometrySDSS Spectrum: 664-52174-111zL = -0.00009 ± 0.00002RA = 26.73336° Dec = -9.49791° Spectroscopic Object: STAR,52.04 , 0.69,1.94 , 0.07,0.63 , 0.03
+i,SDSS (DR8),Sloan i,17.41 ± 0.01,40.42,Has Sloan ugriz photometrySDSS Spectrum: 664-52174-111zL = -0.00009 ± 0.00002RA = 26.73336° Dec = -9.49791° Spectroscopic Object: STAR,109.04 , 1.09,1.90 , 0.05,0.61 , 0.02
+z,SDSS (DR8),Sloan z,16.98 ± 0.03,32.98,Has Sloan ugriz photometrySDSS Spectrum: 664-52174-111zL = -0.00009 ± 0.00002RA = 26.73336° Dec = -9.49791° Spectroscopic Object: STAR,160.81 , 4.07,1.90 , 0.14,0.65 , 0.07

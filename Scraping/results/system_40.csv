@@ -1,0 +1,2 @@
+Discovery,Lens Kind,Lens Grade,Einstein_R quality,z_Lens quality,z_Source quality,Description,Einstein_R,Einstein_R_err,z_lens,z_lens_err,z_source,z_source_err,Stellar_v_disp,Stellar_v_disp_err,Discovery Date,Name,N Images
+SLACS,GAL-GAL,A,SIE model,spectroscopic,spectroscopic,"This  system shows a faint extended counter-arc to the S in the F814W band, opposite the more prominent Northern arc. Both images are only marginally detected in the F435W band.",1.63 , 0.01,0.16419 , 0.00003,0.324 , 0.001,310 , 12,2006-02,SDSS J0912+0029,2
