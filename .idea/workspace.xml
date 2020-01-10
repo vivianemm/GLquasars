@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06a67c59-c5ae-49e4-8e5f-c65803ebb411" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/quasars.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/quasars.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scraping/scraping_ml.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Scraping/scraping_ml.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/.ipynb_checkpoints/Integration-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Database/.ipynb_checkpoints/Integration-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/Integration.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Database/Integration.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/Scraping/scraping_ml.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Database/Scraping/scraping_ml.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,9 +188,9 @@
       <screen x="0" y="27" width="1366" height="694" />
     </state>
     <state x="259" y="27" width="1012" height="694" key="SettingsEditor/0.27.1366.694@0.27.1366.694" timestamp="1576767052350" />
-    <state x="339" y="201" key="com.intellij.ide.util.TipDialog" timestamp="1576766704618">
+    <state x="339" y="201" key="com.intellij.ide.util.TipDialog" timestamp="1578680707776">
       <screen x="0" y="27" width="1366" height="694" />
     </state>
-    <state x="339" y="201" key="com.intellij.ide.util.TipDialog/0.27.1366.694@0.27.1366.694" timestamp="1576766704618" />
+    <state x="339" y="201" key="com.intellij.ide.util.TipDialog/0.27.1366.694@0.27.1366.694" timestamp="1578680707776" />
   </component>
 </project>
