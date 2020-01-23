@@ -1,2 +1,2 @@
-Discovery,Lens Kind,Lens Grade,Einstein_R quality,z_Lens quality,z_Source quality,Description,Einstein_R,Einstein_R_err,z_lens,z_lens_err,z_source,z_source_err,Discovery Date,Name,N Images
-SL2S,GAL-GAL,A,SIE model,spectroscopic,spectroscopic,"This system contains a bright blue arc and a counter-image visible in HST image, also found in the SL2S-RINGS sample.",1.40 , 0.04,0.611 , 0.001,2.36 , 0.01,2011-09-08,SL2S J090408-005953,2
+Discovery,Lens Kind,Lens Grade,Einstein_R quality,z_Lens quality,z_Source quality,Description,Einstein_R,Einstein_R_err,z_lens,z_lens_err,z_source,z_source_err,Discovery Date,Name,N Images,Alternate Names
+SL2S,GAL-GAL,A,SIE model,spectroscopic,spectroscopic,"This system contains a bright blue arc and a counter-image visible in HST image, also found in the SL2S-RINGS sample.",1.40 , 0.04,0.611 , 0.001,2.36 , 0.01,2011-09-08,SL2S J090408-005953,2,"SA76, SL2SJ090407-005952"

@@ -1,2 +1,2 @@
-Discovery,Lens Kind,Lens Grade,"Einstein_R [""]",Einstein_R quality,z_Lens,z_Lens quality,z_Source quality,Description,z_source,z_source_err,Discovery Date,Name,N Images
-SQLS,CLUST-QSO,A,8.14,SIE model,0.68,spectroscopic,spectroscopic,Quadruply  imaged quasar lensed by a cluster of galaxies. One of the largest separation lensed quasar and one of the few systems with detected fifth central image.,1.734 , 0.002,2003-12-01,SDSS J1004+4112,5
+Discovery,Lens Kind,Lens Grade,"Einstein_R [""]",Einstein_R quality,z_Lens,z_Lens quality,z_Source quality,Description,z_source,z_source_err,Discovery Date,Name,N Images,Alternate Names
+SQLS,CLUST-QSO,A,8.14,SIE model,0.68,spectroscopic,spectroscopic,Quadruply  imaged quasar lensed by a cluster of galaxies. One of the largest separation lensed quasar and one of the few systems with detected fifth central image.,1.734 , 0.002,2003-12-01,SDSS J1004+4112,5,SDSS J100434.92+411242.8

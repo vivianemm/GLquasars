@@ -1,2 +1,2 @@
-Discovery,Lens Kind,Lens Grade,Einstein_R quality,z_Lens quality,z_Source quality,Description,Einstein_R,Einstein_R_err,z_lens,z_lens_err,z_source,z_source_err,Discovery Date,Name,N Images
-Serendipitous,GAL-GAL,A,SIE model,spectroscopic,spectroscopic,Re-discovered in the GEMS survey,1.2 , 0.1,0.6174 , 0.0003,2.4 , 0.3,2003-12-19,J033238-275653,2
+Discovery,Lens Kind,Lens Grade,Einstein_R quality,z_Lens quality,z_Source quality,Description,Einstein_R,Einstein_R_err,z_lens,z_lens_err,z_source,z_source_err,Discovery Date,Name,N Images,Alternate Names
+Serendipitous,GAL-GAL,A,SIE model,spectroscopic,spectroscopic,Re-discovered in the GEMS survey,1.2 , 0.1,0.6174 , 0.0003,2.4 , 0.3,2003-12-19,J033238-275653,2,15422

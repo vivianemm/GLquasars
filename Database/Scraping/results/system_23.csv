@@ -1,2 +1,2 @@
-Discovery,Lens Kind,Lens Grade,"Einstein_R [""]",Einstein_R quality,z_Lens,z_Lens quality,z_Source quality,Description,z_source,z_source_err,Discovery Date,Name,N Images
-SQLS,GAL-QSO,A,0.525,SIE model,0.723,spectroscopic,spectroscopic,"Doubly  imaged system with an ""anomalous"" flux ratio. A second mass along the line of sight is needed to reproduce the flux ratio. Narrow BAL feature reported in Trump+2006.",1.6859 , 0.0001,2005-11-01,SDSS J0246-0825,2
+Discovery,Lens Kind,Lens Grade,"Einstein_R [""]",Einstein_R quality,z_Lens,z_Lens quality,z_Source quality,Description,z_source,z_source_err,Discovery Date,Name,N Images,Alternate Names
+SQLS,GAL-QSO,A,0.525,SIE model,0.723,spectroscopic,spectroscopic,"Doubly  imaged system with an ""anomalous"" flux ratio. A second mass along the line of sight is needed to reproduce the flux ratio. Narrow BAL feature reported in Trump+2006.",1.6859 , 0.0001,2005-11-01,SDSS J0246-0825,2,SDSS J024634.09-082536.1

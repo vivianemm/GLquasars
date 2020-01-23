@@ -1,2 +1,2 @@
-Discovery,Lens Kind,Lens Grade,z_Lens,z_Lens quality,z_Source(s),z_Source quality,Description,Einstein_R,Einstein_R_err,Stellar_v_disp,Stellar_v_disp_err,Discovery Date,Name,N Images
-Serendipitous,GAL-QSO,A,0.485,spectroscopic,3.595,spectroscopic,Bright Einstein ring-like feature. The source object is not strictly identified as a QSO. Narrow [OIII] and slightly broader Ly alpha lines are detected.,1.34 , 0.01,219 , 12,1996-01-01,Q0047-2808,4
+Discovery,Lens Kind,Lens Grade,z_Lens,z_Lens quality,z_Source(s),z_Source quality,Description,Einstein_R,Einstein_R_err,Stellar_v_disp,Stellar_v_disp_err,Discovery Date,Name,N Images,Alternate Names
+Serendipitous,GAL-QSO,A,0.485,spectroscopic,3.595,spectroscopic,Bright Einstein ring-like feature. The source object is not strictly identified as a QSO. Narrow [OIII] and slightly broader Ly alpha lines are detected.,1.34 , 0.01,219 , 12,1996-01-01,Q0047-2808,4,ER 0047-2808

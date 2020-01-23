@@ -1,2 +1,2 @@
-Discovery,Discovery,Lens Kind,Lens Grade,z_Lens quality,z_Source quality,Description,z_lens,z_lens_err,z_source,z_source_err,Discovery Date,Name,N Images
-CASSOWARY,SGAS,GAL-GAL,A,spectroscopic,spectroscopic,"The SDSS spectrum shows two objects superimposed, the z = 0.44 galaxy and a star. Cataloged at http://www.ast.cam.ac.uk/ioa/research/cassowary/",0.44 , 0.01,1.944 , 0.001,2007-05-01,CSWA 22,3
+Discovery,Discovery,Lens Kind,Lens Grade,z_Lens quality,z_Source quality,Description,z_lens,z_lens_err,z_source,z_source_err,Discovery Date,Name,N Images,Alternate Names
+CASSOWARY,SGAS,GAL-GAL,A,spectroscopic,spectroscopic,"The SDSS spectrum shows two objects superimposed, the z = 0.44 galaxy and a star. Cataloged at http://www.ast.cam.ac.uk/ioa/research/cassowary/",0.44 , 0.01,1.944 , 0.001,2007-05-01,CSWA 22,3,Hall's Arc
